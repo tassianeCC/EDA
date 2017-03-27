@@ -1,12 +1,6 @@
-package br.ufc.quixada.eda.listaprioridades;
-
+package Ativade1;
 import java.util.List;
 
-/**
- * Implementa a lista de prioridade usando vetor n�o ordenado.
- * @author Tassiane, fabio
- *
- */
 public class LPMaximaNOrdenada {
 	private int nMaximo = 0;
 	private int vetor[] = null;
