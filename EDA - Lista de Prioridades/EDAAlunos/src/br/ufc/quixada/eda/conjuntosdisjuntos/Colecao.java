@@ -3,29 +3,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Colecao {
-	private List<ConjuntoDisjunto> conjuntoDisjuntos = new ArrayList<ConjuntoDisjunto>();
+	private List<ConjuntoDisjuntoLE> conjuntoDisjuntos = new ArrayList<ConjuntoDisjuntoLE>();
 
-	public ConjuntoDisjunto makeSet(int v){
+	public ConjuntoDisjuntoLE makeSet(int v){
 		No no = new No();
 		no.setValor(v);
 		no.setProximo(null);
 
-		return new ConjuntoDisjunto(no);
+		return new ConjuntoDisjuntoLE(no);
 	}
 	
-	public void addConjunto(ConjuntoDisjunto e){
+	public void addConjunto(ConjuntoDisjuntoLE e){
 		conjuntoDisjuntos.add(e);
 	}
 
-	public List<ConjuntoDisjunto> getConjuntoDisjuntos() {
+	public List<ConjuntoDisjuntoLE> getConjuntoDisjuntos() {
 		return conjuntoDisjuntos;
 	}
 	
-	public ConjuntoDisjunto union(ConjuntoDisjunto u, ConjuntoDisjunto v) {
+	public ConjuntoDisjuntoLE union(ConjuntoDisjuntoLE u, ConjuntoDisjuntoLE v) {
 		No primeiroNoU = u.getPrimeiro();
 		No primeiroNoV = v.getPrimeiro();
 
-		ConjuntoDisjunto c = new ConjuntoDisjunto(primeiroNoU);
+		ConjuntoDisjuntoLE c = new ConjuntoDisjuntoLE(primeiroNoU);
 
 		while(primeiroNoU.getProximo() != null){
 			primeiroNoU = primeiroNoU.getProximo();

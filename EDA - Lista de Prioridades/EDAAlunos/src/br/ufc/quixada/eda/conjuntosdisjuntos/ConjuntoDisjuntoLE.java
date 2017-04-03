@@ -1,16 +1,17 @@
 package br.ufc.quixada.eda.conjuntosdisjuntos;
-public class ConjuntoDisjunto {
+public class ConjuntoDisjuntoLE {
 	private No primeiro;
 
-	public ConjuntoDisjunto(){
+	public ConjuntoDisjuntoLE(){
 	}
 	
-	public ConjuntoDisjunto(No primeiro) {
+	public ConjuntoDisjuntoLE(No primeiro) {
 		this.primeiro = primeiro;
 		this.primeiro.setRepresentante(primeiro);
 		this.primeiro.setProximo(null);
 	}
 
+	// find: retorna o representante ou o pai
 	public No find(int x) {
 		No atual = primeiro;
 
@@ -31,7 +32,12 @@ public class ConjuntoDisjunto {
 
 		No atual = this.primeiro;
 
-		while(atual.getRepresentante() != null) {
+		
+//		while(atual.getRepresentante() != null) {
+//		atual = atual.getProximo();
+//	}
+
+		while(atual.getProximo() != null) {
 			atual = atual.getProximo();
 		}
 
