@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import Ativade1.*;
+import br.ufc.quixada.eda.listaprioridades.HeapMaximo;
 
 /**
  * Cria as inst�ncias juntamente com as opera��es.
@@ -16,7 +16,7 @@ import Ativade1.*;
  *
  */
 public class CriarInstancia {	
-	public static int tamanhoInstancias[] = {100, 10000, 50000, 100000, 500000, 800000};
+	public static int tamanhoInstancias[] = {60, 100, 200, 300, 400, 500, 600, 700, 800, 900};
 	public static void criar(){
 		try {
 			@SuppressWarnings("resource")

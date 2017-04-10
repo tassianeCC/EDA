@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class EDAUtil {
 	/**
-	 * Ler o arquivo que contém as prioridades iniciais da lista de prioridades.
+	 * Ler o arquivo que contï¿½m as prioridades iniciais da lista de prioridades.
 	 * @param path
 	 * @return
 	 * @throws IOException
@@ -24,7 +24,7 @@ public class EDAUtil {
     }
     
     /**
-     * Ler as operações que serão realizadas na lista de prioridades após a sua criação.
+     * Ler as operaï¿½ï¿½es que serï¿½o realizadas na lista de prioridades apï¿½s a sua criaï¿½ï¿½o.
      * @param path
      * @return
      * @throws IOException
@@ -33,7 +33,7 @@ public class EDAUtil {
         List<Operacao> operacoes = new ArrayList<Operacao>();
         Scanner scanner = new Scanner(new FileReader(path)).useDelimiter(" |\r\n");	
 		while (scanner.hasNext())
-			operacoes.add(new Operacao(scanner.next(), scanner.nextInt(), scanner.nextInt()));
+			operacoes.add(new Operacao(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
 			
 		scanner.close();
         return operacoes;
