@@ -1,25 +1,25 @@
-package br.ufc.quixada.eda.algoritmos;
+package br.ufc.quixada.eda.arvore_gm.algoritmos;
 
 import java.util.ArrayList;
 
-import br.ufc.quixada.eda.conjuntodisjunto.FlorestaDeConjuntoDisjunto;
-import br.ufc.quixada.eda.grafo.Aresta;
-import br.ufc.quixada.eda.grafo.Grafo;
+import br.ufc.quixada.eda.arvore_gm.grafos.Aresta;
+import br.ufc.quixada.eda.arvore_gm.grafos.Grafo;
+import br.ufc.quixada.eda.conjuntosdisjuntos.ConjuntoDisjunto;	
 
 public class ArvoreGeradoraMinima {
 	
 	
 	public ArrayList<Aresta> Kruskal(Grafo g){
-		FlorestaDeConjuntoDisjunto f = new FlorestaDeConjuntoDisjunto(g.getTotalVertice());
-		f.construir();
+		ConjuntoDisjunto f = new ConjuntoDisjunto(g.getTotalVertice());
+		f.make_set();
 		
 		quick_sort(g.getArestas(), 0, g.getArestas().size() - 1);
 		
 		ArrayList<Aresta> result = new ArrayList<Aresta>();
 		for (Aresta element : g.getArestas()) {
-			if(f.Find_set(element.getX()) != f.Find_set(element.getY())){
+			if(f.find_set(element.getX()) != f.find_set(element.getY())){
 				result.add(element);
-				f.Union(element.getX(), element.getY());
+				f.union(element.getX(), element.getY());
 				if(result.size() == g.getTotalVertice() - 1) return result;
 			}
 		}

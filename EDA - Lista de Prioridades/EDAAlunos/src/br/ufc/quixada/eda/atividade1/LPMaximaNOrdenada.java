@@ -1,4 +1,4 @@
-package Ativade1;
+package br.ufc.quixada.eda.atividade1;
 import java.util.List;
 
 public class LPMaximaNOrdenada {

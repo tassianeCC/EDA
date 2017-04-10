@@ -1,5 +1,7 @@
 package br.ufc.quixada.eda.util;
 
+import br.ufc.quixada.eda.atividade1.*;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import br.ufc.quixada.eda.listaprioridades.HeapMaximo;
+
 
 /**
  * Cria as inst�ncias juntamente com as opera��es.

@@ -1,4 +1,4 @@
-package br.ufc.quixada.eda.grafo;
+package br.ufc.quixada.eda.arvore_gm.grafos;
 
 import java.util.ArrayList;
 

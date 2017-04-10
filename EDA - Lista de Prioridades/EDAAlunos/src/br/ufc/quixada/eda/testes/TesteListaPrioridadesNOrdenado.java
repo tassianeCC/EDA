@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import Ativade1.*;
+import br.ufc.quixada.eda.atividade1.LPMaximaNOrdenada;
 import br.ufc.quixada.eda.util.CriarInstancia;
 import br.ufc.quixada.eda.util.EDAConstants;
 import br.ufc.quixada.eda.util.EDAUtil;

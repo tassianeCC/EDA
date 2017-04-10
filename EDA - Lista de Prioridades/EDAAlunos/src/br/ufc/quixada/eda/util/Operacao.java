@@ -13,7 +13,7 @@ public class Operacao {
 	private Integer y;
 	private Integer peso;
 	
-	public Operacao(Integer x, Integer y, Integer peso) {
+	public Operacao(Integer x, Integer y, Integer peso){
 		this.x = x;
 		this.y = y;
 		this.peso = peso;

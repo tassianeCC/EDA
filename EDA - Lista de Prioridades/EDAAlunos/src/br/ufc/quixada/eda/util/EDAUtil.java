@@ -38,4 +38,14 @@ public class EDAUtil {
 		scanner.close();
         return operacoes;
     }    
+
+    public static List<Operacao> getOperacoes2(String path) throws IOException {
+        List<Operacao> operacoes = new ArrayList<Operacao>();
+        Scanner scanner = new Scanner(new FileReader(path)).useDelimiter(" |\r\n");	
+		while (scanner.hasNext())
+			operacoes.add(new Operacao(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
+			
+		scanner.close();
+        return operacoes;
+    }    
 }
