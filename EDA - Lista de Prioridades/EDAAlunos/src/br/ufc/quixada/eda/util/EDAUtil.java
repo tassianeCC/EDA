@@ -1,5 +1,6 @@
 package br.ufc.quixada.eda.util;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,14 +30,27 @@ public class EDAUtil {
      * @return
      * @throws IOException
      */
-    public static List<Operacao> getOperacoes(String path) throws IOException {
+    public static List<Operacao> getOperacoes(String path) {
         List<Operacao> operacoes = new ArrayList<Operacao>();
-        Scanner scanner = new Scanner(new FileReader(path)).useDelimiter(" |\r\n");	
-		while (scanner.hasNext())
+        Scanner scanner = null;
+
+    	try {
+    		scanner = new Scanner(new FileReader(path)).useDelimiter(" |\r\n");
+		while (scanner.hasNext()) {
 			operacoes.add(new Operacao(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
+		}
 			
 		scanner.close();
         return operacoes;
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	finally {
+			scanner.close();
+	        return operacoes;
+			
+		}
+
     }    
 
     public static List<Operacao> getOperacoes2(String path) throws IOException {
