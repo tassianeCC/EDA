@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class HashEnderecamentoDireto {
+public class HashEnderecamentoDireto extends Hash<Integer>{
 	private int n;
 	private List<LinkedList<Integer>> tabelaHash;
 		
@@ -17,28 +17,47 @@ public class HashEnderecamentoDireto {
 		}
 	}
 	
-	private int calculaHash(int valor){
-		return valor % this.n;
+//	private int calculaHash(int valor){
+//	}
+//	
+//	public void inserir(int valor){
+//	}
+//	
+//	public void remove(int valor){
+//	}
+//	
+//	public int selecionar(int valor){
+//	}
+
+	@Override
+	public Integer calcularHash(Integer valor) {
+		if(valor != null){
+			return valor % this.n;
+		}
+		return null;
 	}
-	
-	public void inserir(int valor){
-		int indice = calculaHash(valor);
+
+	@Override
+	public void inserir(Integer valor) {
+		int indice = calcularHash(valor);
 
 		if(!tabelaHash.get(indice).contains(valor)){
 			tabelaHash.get(indice).add(valor);
 		}
 	}
-	
-	public void remove(int valor){
-		int indice = calculaHash(valor);
+
+	@Override
+	public void remove(Integer valor) {
+		int indice = calcularHash(valor);
 
 		if(tabelaHash.get(indice).contains(valor)){
 			tabelaHash.get(indice).remove(valor);
 		}
 	}
-	
-	public int selecionar(int valor){
-		int indice = calculaHash(valor);
+
+	@Override
+	public Integer selecionar(Integer valor) {
+		int indice = calcularHash(valor);
 
 		if(tabelaHash.get(indice).contains(valor)){
 			return indice;
